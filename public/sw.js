@@ -1,5 +1,5 @@
 const CACHE_NAME = "monthly-rotation-shell-v1";
-const SHELL_ASSETS = ["/", "/manifest.json", "/icons/icon-192.png", "/icons/icon-512.png"];
+const SHELL_ASSETS = ["/", "/manifest.json", "/icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
