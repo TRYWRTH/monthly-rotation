@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf9;
+  --foreground: #241823;
+  --card: #ffffff;
+  --border: #f0dde2;
+  --muted: #8a7480;
+  --primary: #c9184a;
+  --primary-foreground: #ffffff;
+  --accent: #7b6cf6;
+  --rose: #c9184a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #17111a;
+    --foreground: #f3e9ee;
+    --card: #241d29;
+    --border: #382c37;
+    --muted: #a695a2;
+    --primary: #ff6f91;
+    --primary-foreground: #17111a;
+    --accent: #a79bff;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.input {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--foreground);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 0.9rem;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  border-radius: 0.9rem;
+  padding: 0.65rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.1rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
